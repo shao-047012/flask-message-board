@@ -1,0 +1,23 @@
+<h1>Messages</h1>
+
+<ul>
+  {% for msg in messages %}
+    <li>
+      {{ msg }}
+
+         <a href="/messages/{{ loop.index0 }}/edit">編輯</a>
+
+      <form action="/delete/{{ loop.index0 }}" method="POST" style="display:inline;">
+      <button type="submit">刪除</button>
+      <a href="/messages/{{ loop.index0 }}/edit">編輯</a>
+      </form>
+    </li>
+  {% endfor %}
+</ul>
+
+<hr>
+
+<form method="POST" action="/messages">
+  <input type="text" name="content" placeholder="輸入留言">
+  <button type="submit">送出</button>
+</form>

@@ -1,0 +1,13 @@
+<!doctype html>
+<html>
+  <body>
+    <h1>Edit message</h1>
+
+    <form method="POST" action="/messages/{{ index }}/edit">
+      <input type="text" name="content" value="{{ old_content }}">
+      <button type="submit">更新</button>
+    </form>
+
+    <p><a href="/messages">回列表</a></p>
+  </body>
+</html>

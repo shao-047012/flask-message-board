@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<body>
+  <h1>Students</h1>
+
+  <ul>
+    {% for s in students %}
+      <li>{{ s }}</li>
+    {% endfor %}
+  </ul>
+
+  <p>Total: {{ students|length }}</p>
+
+  <a href="/students/new">Add new student</a>
+</body>
+</html>

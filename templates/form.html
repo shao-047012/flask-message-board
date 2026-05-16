@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+  <body>
+    <h1>Enter your name</h1>
+
+    <form method="post">
+      <input type="text" name="username">
+      <button type="submit">Send</button>
+    </form>
+
+    {% if name %}
+      <p>Hello, {{ name }}</p>
+    {% endif %}
+  </body>
+</html>
